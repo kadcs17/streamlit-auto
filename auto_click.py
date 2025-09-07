@@ -56,9 +56,9 @@ clean_old_logs()
 
 # 主逻辑开始
 try:
-    driver.get("https://onlyno999.streamlit.app/")
+    driver.get("https://ssssrr.streamlit.app/")
     print("已打开网页，等待页面加载 30 秒...")
-    time.sleep(30)  # 初次加载等待
+    time.sleep(20)  # 初次加载等待
 
     # 查找按钮
     buttons = driver.find_elements(By.XPATH, "//button[contains(text(), 'get this app back up')]")
@@ -67,7 +67,7 @@ try:
     if buttons:
         buttons[0].click()
         print("检测到按钮，已点击。等待 45 秒完成恢复操作...")
-        time.sleep(45)  # 点击后等待
+        time.sleep(25)  # 点击后等待
         log_entry = f"[{timestamp}] 按钮已点击，已等待45秒完成\n"
     else:
         print("未检测到按钮，跳过点击。")
